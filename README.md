@@ -12,13 +12,13 @@ This repository contains the generating codes for RSVC2021 dataset.
   - scipy
   - opencv-python
 
-- OS Environment
+- OS Environment  
   The code has been tested on both Windows 10 and Ubuntu 18.04 and should be able to execute on Windows and Linux.
 
 - Data Preparation
   - RSVC2021 is originated from two public Remote Sensing datasets: DOTA and ITCVD. You should download these two datasets before running our codes.
-    - [**DOTA dataset (click for link)**](https://captain-whu.github.io/DOTA/dataset.html) 
-      ; Note that we only need the training set and the validation set because only these two parts have annotations.
+    - [**DOTA dataset (click for link)**](https://captain-whu.github.io/DOTA/dataset.html)   
+      Note that we only need the training set and the validation set because only these two parts have annotations.
     - [**ITCVD dataset (click for link)**](https://research.utwente.nl/en/datasets/itcvd-dataset)
   - You can customize the storage location of the datasets, but the internal folder tree of each dataset must be organized as follows:
     - DOTA dataset:
@@ -60,14 +60,14 @@ This repository contains the generating codes for RSVC2021 dataset.
       
   
 ### Running for Generation
-- Image Processing and Label Generation
+- Image Processing and Label Generation  
   The workflows of image processing and label generation are integrated in `construct_RSVC.py`. Please run this script as follows:
   ```
   python construct_RSVC.py --DOTA_ROOT [Path to your DOTA dataset] \
       --ITCVD_ROOT [Path to your ITCVD dataset] \
       --OUTPUT_ROOT [Path where you want to store the RSVC2021 dataset]
   ```
-- Density Map Generation
+- Density Map Generation  
   This repository will not provide the relevant codes, as this is not our original work. If you need to generate density maps based on annotations, please refer to other projects, such as [**C-3-Framework**](https://github.com/gjy3035/C-3-Framework). Note that he annotation format we provide (see below) should be similar to conventional crowd counting datasets and easy to process.
 
 ## Tips and Explanation
